@@ -1,16 +1,16 @@
 // src/components/Card.jsx
 import React from "react";
-
+import Button from "./Button";
 function Card({ image, name, category, price }) {
   return (
-    <section className="bg-blue-200 h-auto w-64">
-      <div className="m-auto text-center">
-        <img src={image.thumbnail} alt={name} className="w-full object-cover" />
-        <button className="m-auto p-2 rounded-xl bg-white">Add Card</button>
+    <section className="h-auto w-[250px]">
+      <div className="m-auto text-center relative mb-8">
+        <img src={image.thumbnail} alt={name} className="w-full object-cover rounded-md shadow-md" />
+        <Button></Button>
       </div>
-      <h2 className="text-lg font-semibold">{category}</h2>
-      <h3 className="text-gray-700">{name}</h3>
-      <p className="text-gray-500">${price.toFixed(2)}</p>
+      <h2 className="text-sm text-gray-500">{category}</h2>
+      <h3 className="text-gray-700 font-bold">{name}</h3>
+      <p className="text-orange-800 text-md">${price.toFixed(2)}</p>
     </section>
   );
 }
