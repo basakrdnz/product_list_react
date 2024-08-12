@@ -1,12 +1,12 @@
 // src/components/Card.jsx
 import React from "react";
 import Button from "./Button";
-function Card({ image, name, category, price }) {
+function Card({ image, name, category, price, index }) {
   return (
     <section className="h-auto w-[250px]">
       <div className="m-auto text-center relative mb-8">
         <img src={image.thumbnail} alt={name} className="w-full object-cover rounded-md shadow-md" />
-        <Button></Button>
+        <Button name={name} index={index}></Button>
       </div>
       <h2 className="text-sm text-gray-500">{category}</h2>
       <h3 className="text-gray-700 font-bold">{name}</h3>

@@ -1,13 +1,40 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-
-const Button = () => {
+const Button = ({ name, index }) => {
 
   //useState hook
   const [addCard, setAddCard]=useState(false);
   const [count, setCount]=useState(0);
 
+  const[sepet,setSepet]=useState([]); 
+
+  //şimdi sepeti array gibi düşünürsek
+  const sepetUpdates = (name, count) => {
+    setSepet(prevSepet => {
+      // x = ürün sepette var mı?
+      const existingItem = prevSepet.find(item => item.name === name);
+      
+      if (existingItem) {
+        // (x) doğruysa yani varsa
+        if (count > 0) {
+          // count 1'den büyükse artır
+          return prevSepet.map(item =>
+            item.name === name ? { ...item, count } : item
+          );
+        } else {
+          // count 0 veya daha azsa sepetten çıkar
+          return prevSepet.filter(item => item.name !== name);
+        }
+      } else {
+        // Yoksa sepete ekle
+        return [...prevSepet, { name, count }];
+      }
+    });
+  };
+  
+ 
   const handleClick = () =>{
+    setCount(count+1);
     setAddCard(true);
   }
 
@@ -16,6 +43,7 @@ const Button = () => {
     setCount(count-1)
     }
     else {
+      setCount(count-1);
       setAddCard(false)
     }
   }
@@ -23,6 +51,14 @@ const Button = () => {
   const handleArttır = () => {
     setCount(count + 1);
   };
+  
+  // count her değiştiğinde konsola yazdıracak bir useEffect
+  useEffect(() => {
+    console.log(sepet);
+    
+    console.log(`Index: ${index}, Name: ${name}, Count: ${count}`);
+  }, [count]); // count değişkeni değiştiğinde useEffect tetiklenirmişş
+//-1 yaptık yoksa 0dan değil 1den başlıyor direk
 
 
 // {!isAdded ? ( ... ) : ( ... )} koşullu render

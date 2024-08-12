@@ -4,17 +4,23 @@ import Card from "./Card";
 
 function ProductList() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <section>
+    <h1 className="text-4xl font-bold mb-4">Desserts</h1>
+    <div className="gap-4 flex flex-wrap">
       {data.map((product, index) => (
         <Card
           key={index}
+          index={index+1}
           image={product.image}
           name={product.name}
           category={product.category}
+          cart={cart}
+          setCart={setCart}
           price={product.price}
         />
       ))}
     </div>
+    </section>
   );
 }
 
