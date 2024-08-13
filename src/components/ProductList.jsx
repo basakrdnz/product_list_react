@@ -14,8 +14,6 @@ function ProductList() {
           image={product.image}
           name={product.name}
           category={product.category}
-          cart={cart}
-          setCart={setCart}
           price={product.price}
         />
       ))}
