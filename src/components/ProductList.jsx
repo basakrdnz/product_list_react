@@ -2,7 +2,7 @@ import React from "react";
 import data from "/data.json"; 
 import Card from "./Card";
 
-function ProductList() {
+function ProductList({ setCartItems, cartItems }) {
   return (
     <section>
     <h1 className="text-4xl font-bold mb-4">Desserts</h1>
@@ -15,6 +15,8 @@ function ProductList() {
           name={product.name}
           category={product.category}
           price={product.price}
+          setCartItems={setCartItems}
+          cartItems={cartItems}
         />
       ))}
     </div>
