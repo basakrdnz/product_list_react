@@ -9,10 +9,11 @@ function Payment({ cartItems, setCartItems}) {
     
     //deleteitem eğer bir parametre istemiyorsa fonksiyon şeklinde çağırılabilir ancak
     //burda olduğu gibi name gibi bir parametre beklentisi varsa const çevrilmeli
-    const deleteItem = (name) => {
+    const deleteItem = (name,count) => {
         const updatedCartItems = cartItems.filter(item => item.name !== name);
         setCartItems(updatedCartItems);
-        setAddCard(false);
+        //yemedi
+        //setAddCard(false);
     };
     
 
