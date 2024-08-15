@@ -51,6 +51,17 @@ const Button = ({ name, price, index, setCartItems, cartItems }) => {
           }
         }))
       };
+// setcartitems appde bulunan cartitemslarım güncellenme state durumu değişimi için kullanılır yani ilk aşamada boş bi
+//array tanımladık usestate ile daha sonra handleclick ile bu state'e değerleri ekledik 3 çeşit olacak şekilde 
+//şimdi de burdayız ve map ile her bir item üzernden kontroller yapılacak şekilde itemın ismi isme eşit iseden devam ediyoruz...
+//şimid burda ternary operator denilen koşullu ifadeyi kullandık. bu da if-else yapısına benzer ancak tek satırda yazılan versiyonu.
+//şöyle ki  yapısı --->>>>>>>>   
+// koşul ? true ise yapılacak işlem : false ise yapılacak işlem şeklinde...
+// amac isime bakarken şu soru.. bu item arttırmak istediğimiz ürün mü?
+// eğer öyleyse ------->>>>> { ...item, count: item.count + 1 } burası için konuşacak olursak bu ifade jsde
+//"spread syntax" yani yayılma sözdizimi olarak biliniyor ve bir nesnenin kopyasını oluşturmak ardından
+//bu kopya üzerinden bzı değişiklikler yapmak için kullanılır. 
+
 
     useEffect(() => {
         console.log(`Index: ${index}, Name: ${name}, Count: ${count}`);
