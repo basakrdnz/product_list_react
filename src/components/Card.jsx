@@ -9,6 +9,7 @@ function Card({ image, name, category, price, index, setCartItems, cartItems, bu
         <Button
           name={name}
           price={price}
+          image={image.thumbnail}
           setCartItems={setCartItems}
           cartItems={cartItems}
           buttonStates={buttonStates}
