@@ -5,7 +5,7 @@ import Card from "./Card";
 function ProductList({ setCartItems, cartItems, buttonStates, setButtonStates }) {
   return (
     <section>
-      <h1 className="text-4xl font-bold mb-4">Desserts</h1>
+      <h1 className="text-4xl font-bold mb-6">Desserts</h1>
       <div className="gap-4 flex flex-wrap">
         {data.map((product, index) => (
           <Card
