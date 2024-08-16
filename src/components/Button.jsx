@@ -42,23 +42,25 @@ const Button = ({ name, price, setCartItems, cartItems, buttonStates, setButtonS
     };
 
     return (
-        <div>
-            {!addCard ? (
-                <button
-                    className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex items-center justify-center w-44 p-2 rounded-3xl bg-white border-2 border-orange-600 font-bold"
-                    onClick={handleClick}
-                >
-                    <img src="assets/images/icon-add-to-cart.svg" alt="shopping icon" className='px-2' />
-                    Add to Cart
-                </button>
-            ) : (
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex items-center justify-between w-44 p-2 rounded-3xl bg-orange-600 text-white font-bold">
-                    <button onClick={handleAzalt} className="px-2 border-2 rounded-full hover:bg-white hover:text-orange-600 hover:border-orange-600">-</button>
-                    <div>{count}</div>
-                    <button onClick={handleClick} className="px-2 border-2 rounded-full hover:bg-white hover:text-orange-600 hover:border-orange-600">+</button>
-                </div>
-            )}
+<div>
+    {!addCard ? (
+        <button
+            className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex items-center justify-center
+            w-44 p-2 rounded-3xl bg-white border-2 border-rose-800 font-bold hover:text-red"
+            onClick={handleClick}
+        >
+            <img src="assets/images/icon-add-to-cart.svg" alt="shopping icon" className='px-2' />
+            Add to Cart
+        </button>
+    ) : (
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex items-center justify-between w-44 p-2 rounded-3xl bg-red text-white font-bold">
+            <button onClick={handleAzalt} className="px-2 border-2 rounded-full hover:bg-white hover:text-red hover:border-red">-</button>
+            <div>{count}</div>
+            <button onClick={handleClick} className="px-2 border-2 rounded-full hover:bg-white hover:text-red hover:border-red">+</button>
         </div>
+    )}
+</div>
+
     );
 };
 

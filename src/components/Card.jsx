@@ -15,9 +15,10 @@ function Card({ image, name, category, price, index, setCartItems, cartItems, bu
           setButtonStates={setButtonStates}
         />
       </div>
-      <h2 className="text-sm text-gray-500">{category}</h2>
-      <h3 className="text-gray-700 font-bold">{name}</h3>
-      <p className="text-orange-800 text-md">${price.toFixed(2)}</p>
+      <h2 className="text-sm text-rose-300">{category}</h2>
+      <h3 className="text-black font-bold">{name}</h3>
+      <p className="text-red text-md font-medium">${price.toFixed(2)}</p>
+
     </section>
   );
 }
