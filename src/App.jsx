@@ -37,7 +37,7 @@ function App() {
   return (
     <>
       <section className="bg-rose-50">        
-        <div id="heroSection" className="flex m-auto p-14 container gap-6">
+        <div id="heroSection" className="flex flex-col md:flex-row m-auto p-12 container gap-6">
           <ProductList setCartItems={setCartItems} cartItems={cartItems} setButtonStates={setButtonStates} buttonStates={buttonStates}></ProductList>
           <Payment cartItems={cartItems} setCartItems={setCartItems} resetButtonState={resetButtonState} resetAllButtonStates={resetAllButtonStates}></Payment>
         </div>
