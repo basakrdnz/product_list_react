@@ -1,24 +1,19 @@
 import React from "react";
 
-function Payment({ cartItems, setCartItems}) {
-    let content; // Render edilecek içeriği tutacak değişken
-
+function Payment({ cartItems, setCartItems, resetButtonState }) {
     const totalPriceCount = cartItems.reduce((total, item) => {
         return total + item.price * item.count;
     }, 0).toFixed(2);
-    
-    //deleteitem eğer bir parametre istemiyorsa fonksiyon şeklinde çağırılabilir ancak
-    //burda olduğu gibi name gibi bir parametre beklentisi varsa const çevrilmeli
-    const deleteItem = (name,count) => {
+
+    const deleteItem = (name) => {
         const updatedCartItems = cartItems.filter(item => item.name !== name);
         setCartItems(updatedCartItems);
-        //yemedi
-        //setAddCard(false);
+        resetButtonState(name);
     };
-    
+
+    let content;
 
     if (cartItems.length === 0) {
-        // Eğer sepet boşsa
         content = (
             <>
                 <img src="assets/images/illustration-empty-cart.svg" alt="Empty Cart" />
@@ -26,7 +21,6 @@ function Payment({ cartItems, setCartItems}) {
             </>
         );
     } else {
-        // Eğer sepette ürün varsa
         content = (
             <>
                 {cartItems.map((item, index) => (
@@ -47,7 +41,6 @@ function Payment({ cartItems, setCartItems}) {
                                 >
                                     <img src="assets/images/icon-remove-item.svg" alt="Remove Item" />
                                 </button>
-
                             </div>
                         </div>
                     </div>
@@ -65,7 +58,6 @@ function Payment({ cartItems, setCartItems}) {
             </>
         );
     }
-    
 
     return (
         <section className="bg-gray-100 flex flex-col h-full py-6 shadow-xl rounded-md w-[90%] p-4 gap-2 min-w-72 max-w-96 mx-auto" id="payment">
@@ -75,7 +67,6 @@ function Payment({ cartItems, setCartItems}) {
             </div>
         </section>
     );
-    
 }
 
 export default Payment;
