@@ -76,6 +76,6 @@ setButtonStates(prevState => ({
 
 ## Author
 
-- Website - [Basak Karadeniz](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Basak Karadeniz](https://product-list-react-git-main-basaks-projects.vercel.app)
+- Frontend Mentor - [@basakrdnz](https://www.frontendmentor.io/profile/basakrdnz)
 
