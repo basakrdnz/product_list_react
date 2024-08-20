@@ -11,8 +11,6 @@ This is a solution to the [Product list with cart challenge on Frontend Mentor](
   - [Links](#links)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
 
 
 ### The challenge
@@ -37,8 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Solution Site: [Product List](https://product-list-react-git-main-basaks-projects.vercel.app)
 
 ### Built with
 
@@ -71,11 +68,4 @@ setButtonStates(prevState => ({
                 item.name === name ? { ...item, count: item.count - 1 } : item
             ));
 **->->->->->->->->-->->->->->->->->->->->->->->->->->->->**
-
-
-
-## Author
-
-- Website - [Basak Karadeniz](https://product-list-react-git-main-basaks-projects.vercel.app)
-- Frontend Mentor - [@basakrdnz](https://www.frontendmentor.io/profile/basakrdnz)
 
