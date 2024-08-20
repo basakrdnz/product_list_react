@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](public\assets\images\productlist_img_1.png)
+![](public/assets/images/productlist_img_1.png)
 
 ![](public\assets\images\productlist_img_2.png)
 
