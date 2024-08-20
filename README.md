@@ -28,11 +28,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./assets/images/productlist_img_1.png)
+![](public\assets\images\productlist_img_1.png)
 
-![](./assets/images/productlist_img_2.png)
+![](public\assets\images\productlist_img_2.png)
 
-![](./assets/images/productlist_img_3.png)
+![](public\assets\images\productlist_img_3.png)
 
 
 ### Links
